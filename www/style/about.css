@@ -1,0 +1,47 @@
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5%;
+  padding: 100px 0 200px;
+  text-align: left;
+  color: var(--dark);
+  overflow: visible;
+  height: auto;
+  grid-auto-rows: minmax(auto, auto);
+}
+
+.about_card img {
+  width: 100%;
+}
+
+.about_card h2 {
+  font-size: 2.4rem;
+  padding: 20px;
+}
+.about_card p {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .about_container {
+    grid-template-columns: 1fr;
+
+    /* padding-bottom: 400px; */
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .about_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) {
+  .about_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

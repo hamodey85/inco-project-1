@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mr.Coffee</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
       rel="stylesheet"
@@ -13,8 +13,17 @@
   </head>
   <body>
     <main id="main">
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   Start Nav   ########################### -->
+      <!-- ################################################################ -->
       <nav>
         <div class="navBar_container container">
+          <div id="nav_humburger_icon" class="nav_humburger_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <ul id="navbar">
             <li class="navBar_list logo">
               <a class="navBar_item navBar_item_logo" href="index.html"
@@ -22,6 +31,7 @@
                   class="navBar_logo_img"
                   src="./Assets/full_logo_white.png"
                   alt="logo"
+                  loading="lazy"
               /></a>
             </li>
             <li class="navBar_list">
@@ -36,13 +46,43 @@
           </ul>
         </div>
       </nav>
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   End Nav   ############################# -->
+      <!-- ################################################################ -->
+
+      <!-- ################################################################ -->
+      <!-- ######################   Start Header  ######################### -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
       <header>
-        <div class="header_title">
-          <a href="#section_weLike" class="scrollTo"
-            ><h1>DISCOVER OUR PHILO COFFEE</h1></a
-          >
+        <!-- start header_logo_wrapper-->
+        <div class="header_logo_wrapper">
+          <img
+            src="./Assets/logo_mrcoffee.png"
+            alt="mrcoffee logo"
+            loading="lazy"
+          />
         </div>
+        <!-- end header_logo_wrapper-->
+        <!-- ################################################################ -->
+        <!-- start header_container  -->
+        <div class="header_container container">
+          <div class="header_title">
+            <h1>DISCOVER OUR PHILO COFFEE</h1>
+          </div>
+        </div>
+        <!-- start header_container  -->
       </header>
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   End Header   ########################## -->
+      <!-- ################################################################ -->
+
+      <!-- ################################################################ -->
+      <!-- ##################   Start section_weLike  ##################### -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
       <section id="section_weLike" class="section_weLike">
         <h2>At Mr.Coffee<br />WE LIKE THREE THINGS</h2>
         <div class="cards_container container">
@@ -73,59 +113,95 @@
             </div>
           </div>
         </div>
-        <a href="#section_findOut" class="scrollTo">
-          <h2 class="card_h2_2">FIND OUT MORE</h2></a
-        >
+        <div class="findOut_button">
+          <span>FIND OUT MORE</span>
+        </div>
       </section>
+
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ##################   End section_weLike   ###################### -->
+      <!-- ################################################################ -->
+
+      <!-- ################################################################ -->
+      <!-- ##################   Start section_findOut ##################### -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
       <section id="section_findOut" class="section_findOut">
         <h2>Discover our program</h2>
 
-        <div class="program_cards">
+        <div class="program_cards container">
           <div class="p_card p_card1">
             <div class="p_card_title">
-              <p>
-                <span class="p_card_1_span"></span> Your cafe welcomes you 7
-                days a week:
-              </p>
+              <span class="open7days_icon"></span>
+              <h4>cafe welcomes you 7 days a week:</h4>
             </div>
           </div>
           <div class="p_card p_card2">
             <div class="p_card_title">
-              Every Tuesday, find the poetic cafes:
+              <h4>Every Tuesday, find the poetic cafes:</h4>
             </div>
             <div class="p_card_body">
-              Come listen or read your most beautiful poems: Mr. Coffee offers a
-              consumption to all the brave!
+              <p>
+                Come listen or read your most beautiful poems: Mr. Coffee offers
+                a consumption to all the brave!
+              </p>
             </div>
           </div>
           <div class="p_card p_card3">
             <div class="p_card_title">
-              Every Thursday, find the philosophy and debate cafes:
+              <h4>Every Thursday, find the philosophy and debate cafes:</h4>
             </div>
             <div class="p_card_body">
-              Around a philosophical or social theme, come and debate between
-              experts or the curious.
+              <p>
+                Around a philosophical or social theme, come and debate between
+                experts or the curious.
+              </p>
+            </div>
+          </div>
+          <div class="p_card p_card4">
+            <div class="p_card_title">
+              <h4>
+                Without forgetting our writing workshops and exceptional events!
+              </h4>
+            </div>
+          </div>
+          <div class="p_card p_card5">
+            <div class="p_card_title">
+              <h4>
+                Go to our <a href="contact.html">Contact page</a> to find all
+                practical information
+              </h4>
             </div>
           </div>
         </div>
-
-        <p>
-          Without forgetting our writing workshops and exceptional events!
-        </p>
-
-        <p>Go to our Contact page to find all practical information</p>
       </section>
 
-      <footer>
-        <a class="footer_logo scrollTo" href="#main"></a>
-        <h4>Follow us on social media!</h4>
-        <div class="footer_social_icons">
-          <a class="footer_icon_facebook" href="//www.facebook.com/"></a>
-          <a class="footer_icon_twitter" href="//www.linkedin.com/"></a>
-          <a class="footer_icon_linkedin" href="//twitter.com/"></a>
-        </div>
-      </footer>
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ##################   End section_findOut   ###################### -->
+      <!-- ################################################################ -->
     </main>
+
+    <!-- ################################################################ -->
+    <!-- ##################   Start footer ##################### -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
+    <footer>
+      <div class="footer_logo_container">
+        <a class="footer_logo scrollTo" href="#main"></a>
+      </div>
+      <h4>Follow us on social media!</h4>
+      <div class="footer_social_icons">
+        <a class="footer_icon_facebook" href="//www.facebook.com/"></a>
+        <a class="footer_icon_twitter" href="//www.linkedin.com/"></a>
+        <a class="footer_icon_linkedin" href="//twitter.com/"></a>
+      </div>
+    </footer>
+    <!-- ################################################################ -->
+    <!-- #######################   End footer  ########################## -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
 
     <script src="./js/js.js"></script>
   </body>

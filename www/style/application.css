@@ -6,24 +6,72 @@
 ################################################################
 */
 :root {
-  /* RGB */
-  --dark-rgba: rgba(36, 37, 45, 0.7);
-  --red-rgba: rgba(242, 95, 92, 1);
-  --yellow-rgba: rgba(255, 224, 102, 1);
-  --blue-rgba: rgba(36, 123, 160, 1);
-  --green-rgba: rgba(112, 193, 179, 1);
+  /* 
+################################################################
+##################         COLORS Variables    #################
+################################################################
+  */
+  --blue: #6a7b8b;
+  --light: #f5f5f5;
 
-  /* RGB */
-  --light: rgba(255, 255, 255, 0.9);
-  --dark: #24252d;
-  --red: #f25f5c;
-  --yellow: #ffe066;
-  --blue: #247ba0;
-  --green: #70c1b3;
-  --purple: #5d2566;
-  --color-light-rgba: rgba(255, 255, 255, 0.9);
+  --gray: #bac1c8;
+  --dark: #5c5b5b;
+  --darker: #24252d;
+
+  /*
+################################################################
+##################    Media Query Variables    #################
+################################################################
+
+*/
+  --viewport-s: (min-width: 480px);
+  --viewport-m: (min-width: 768px);
+  --viewport-l: (min-width: 1024px);
+  --viewport-xl: (min-width: 1280px);
+
+  /*
+################################################################
+################################################################
+##################        End  Variables       #################
+################################################################
+################################################################
+  */
+}
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... } */
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  ...;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  ...;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  ...;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  ...;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...;
+} */
 /*
 ################################################################
 ################################################################
@@ -41,7 +89,7 @@ body {
   /* font-family: 'Dosis', sans-serif; */
   /* font-family: Arial, Helvetica, sans-serif; */
   vertical-align: baseline;
-  background: var(--dark);
+  background: var(--light);
   line-height: 1.75;
   font-size: 1em;
   touch-action: pan-y;
@@ -57,9 +105,8 @@ body {
   background: var(--dark);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--red);
+  background-color: var(--blue);
   border-radius: 10px;
-  /* border: 3px solid orange; */
 }
 
 /*
@@ -76,6 +123,42 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.displayNone {
+  display: none;
+  visibility: hidden;
+}
+.displayinline {
+  display: inline !important;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 /*
 ################################################################
 ################################################################
@@ -84,7 +167,8 @@ body {
 ################################################################
 */
 nav {
-  background: var(--dark);
+  background: var(--blue);
+  position: relative;
 }
 #navbar {
   margin: 0;
@@ -100,7 +184,7 @@ nav {
 .navBar_item {
   display: block;
   text-decoration: none;
-  color: rgb(255, 107, 104);
+  color: var(--light);
 
   font-size: 1.1rem;
   font-weight: 700;
@@ -109,7 +193,7 @@ nav {
   overflow: hidden;
 }
 .navBar_item:hover {
-  color: var(--green);
+  color: var(--darker);
 }
 
 .logo_container {
@@ -124,6 +208,78 @@ nav {
 .navBar_logo_img {
   max-height: 45px;
 }
+.nav_humburger_icon {
+  display: none;
+}
+.rotate45 {
+  transform: rotate(45deg);
+}
+.rotate45right {
+  transform: rotate(-45deg);
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #navbar {
+    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  #navbar li:nth-child(n + 2) {
+    display: none;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .nav_humburger_icon {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 20px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .nav_humburger_icon span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #navbar li:nth-child(n + 2) {
+    display: none;
+  }
+  #navbar {
+    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
 
 /*
 ################################################################
@@ -132,11 +288,6 @@ nav {
 ################################################################
 ################################################################
 */
-
-.section_weLike a,
-header a {
-  text-decoration: none;
-}
 
 /*
 ################################################################
@@ -149,62 +300,49 @@ header a {
 header {
   position: relative;
   width: 100%;
-  height: 800px;
-  /* clip-path: polygon(
-    0 4%,
-    100% 0,
-    98% 41%,
-    100% 96%,
-    68% 96%,
-    9% 91%,
-    0 71%,
-    5% 33%
-  ); */
-
-  clip-path: polygon(
-    5% 5%,
-    100% 0%,
-    100% 75%,
-    75% 75%,
-    75% 100%,
-    50% 80%,
-    0% 75%
-  );
 }
-header::after {
-  content: '';
-  background: url('../Assets/mr_coffee_salle.jpg');
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -10;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-origin: border-box;
-  background-size: cover;
-}
-.header_title {
-  width: 700px;
-  position: relative;
-  top: 400px;
-  margin: auto;
-  padding: 70px 30px;
-}
-
-.header_title h1 {
-  position: relative;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
-  background: rgba(242, 95, 92, 0.9);
+header h1 {
   color: var(--light);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--dark-rgba);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #131313;
   font-weight: 1000;
-  letter-spacing: 5px;
+}
+.header_logo_wrapper {
+  width: 100%;
+}
+.header_logo_wrapper img {
+  width: 200px;
+  /* Images default to being inline, inline items cannot have a width, so change to block: */
+  display: block;
+  margin: 10px auto;
+}
+/* .header_title_container {
+  margin-top: 100px;
+} */
+.header_container {
+  padding-top: 50px;
+  height: 800px;
+  background: url('../Assets/mr_coffee_salle.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  header h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .header_container {
+    height: 100px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .header_container {
+    height: 300px;
+  }
 }
 
 /*
@@ -216,80 +354,49 @@ header::after {
 */
 .section_weLike {
   position: relative;
-
-  padding-top: 50px;
-  padding-bottom: 150px;
-  clip-path: polygon(
-    0 12%,
-    8% 25%,
-    0 48%,
-    7% 68%,
-    5% 85%,
-    0 100%,
-    33% 100%,
-    66% 100%,
-    98% 99%,
-    97% 77%,
-    100% 55%,
-    93% 42%,
-    100% 32%,
-    95% 20%,
-    100% 9%,
-    95% 2%,
-    69% 5%,
-    48% 0,
-    31% 6%,
-    11% 2%
-  );
-}
-.section_weLike::after {
-  background: var(--dark);
-  background: url('../assets/pexels/beans-brown-cafe-caffeine-532753.jpg');
-  content: '';
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -10;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-origin: border-box;
-  background-size: cover;
 }
 .section_weLike h2 {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin: 70px 0;
   padding: 0;
-  font-size: 2.4rem;
-  color: var(--light);
-  letter-spacing: 0.3rem;
+  font-size: 1.7rem;
+  color: var(--dark);
+  letter-spacing: 2px;
   font-weight: 1000;
 }
 
-.cards_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3%;
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+  }
 }
 
 .card {
   /* width: */
-  background: var(--blue);
+  background: var(--gray);
   border-radius: 10px;
   padding-top: 30px;
   margin-bottom: 100px;
 }
-.card_1 {
-  background: var(--green);
-}
-.card_2 {
-  background: var(--blue);
-}
-.card_3 {
-  background: var(--red);
-}
+
 .card_img_1 {
   background: url('../Assets/icon_café.png') no-repeat;
 }
@@ -305,28 +412,30 @@ header::after {
   background-size: contain;
   background-position: center center;
 }
-
 .card_title {
   margin: 20px auto 30px;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var(--dark);
+  color: var(--light);
+  text-shadow: 0 0 2px #212121;
 }
 .card_body {
-  color: var(--dark);
+  color: var(--light);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 5px 20px 20px;
+  text-shadow: 0 0 2px #212121;
+  /* text-align: center;
+  display: inline-block; */
 }
 
-.card_h2_2 {
-  background: var(--yellow);
-  width: 500px;
-  margin-right: auto;
-  margin-left: auto;
-  color: var(--dark) !important;
-  border-radius: 10px;
+.findOut_button span {
+  padding: 20px 70px;
+  color: var(--light);
+  background: var(--blue);
+  font-size: 1.4rem;
+  border-radius: 7px;
 }
 
 /*
@@ -337,17 +446,91 @@ header::after {
 ################################################################
 */
 .section_findOut {
-  padding-top: 50px;
-  padding-bottom: 150px;
-  background: var(--purple);
+  padding: 100px 0 300px;
 }
 .section_findOut h2 {
   margin-bottom: 50px;
   padding: 0;
   font-size: 2.4rem;
-  color: var(--light);
+  color: var(--dark);
   letter-spacing: 0.3rem;
   font-weight: 1000;
+}
+.program_cards {
+  display: grid;
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-columns: 1fr 1fr;
+
+  grid-gap: 10%;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .program_cards {
+    grid-gap: 10%;
+    grid-template-columns: 1fr;
+    padding-bottom: 300px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .program_cards {
+    grid-gap: 10%;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) {
+  .program_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+  }
+}
+
+.p_card {
+  padding: 10px;
+  background: var(--light);
+  color: var(--dark);
+  box-shadow: 2px 2px 5px 0px var(--dark-rgba);
+}
+.p_card1 {
+  border-radius: 10px 70px 10px 10px;
+}
+.p_card2 {
+  border-radius: 70px 10px 10px 10px;
+}
+.p_card3 {
+  border-radius: 10px 70px 10px 10px;
+}
+.p_card4 {
+  border-radius: 70px 10px 10px 10px;
+}
+.p_card5 {
+  border-radius: 70px;
+}
+.open7days_icon {
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  display: inline-block;
+  background: url('../Assets/icon_open.png');
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center center;
+}
+.program_cards h4 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.program_cards p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.p_card_title a {
+  color: var(--blue);
 }
 /*
 ################################################################
@@ -359,6 +542,7 @@ header::after {
 
 footer {
   padding: 20px 0;
+  background: var(--blue);
 }
 .footer_social_icons {
   position: relative;
@@ -367,8 +551,19 @@ footer h4 {
   /* margin: 0; */
   color: var(--light);
 }
+.footer_logo_container {
+  position: absolute;
+  left: 100px;
+  bottom: 30px;
+}
+
 .footer_logo {
   background: url('../Assets/full_logo_white.png');
+  width: 200px;
+  height: 100px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .footer_icon_facebook {
   background: url('../Assets/logo_facebook.png');
@@ -388,13 +583,22 @@ footer h4 {
   margin: 10px 20px;
   background-size: contain;
 }
-.footer_logo {
-  width: 200px;
-  height: 50px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-position: center center; */
-  /* position: relative;
-  left: 40px; */
+@media (max-width: 575.98px) {
+  .footer_logo_container {
+    display: none;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .footer_logo_container {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+  .footer_logo_container {
+    left: 10px;
+  }
 }

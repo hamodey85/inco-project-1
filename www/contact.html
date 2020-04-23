@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/application.css" />
+    <link rel="stylesheet" href="./style/contact.css" />
+  </head>
+  <body>
+    <!-- ################################################################ -->
+    <!-- #######################   start Module  ######################## -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
+    <div id="pop_up_container" class="hideModal">
+      <div class="pop_up">
+        <div class="pop_up_content">
+          <div class="logo"></div>
+          <div class="message">
+            <h3>Thanks</h3>
+            <h3>Your message has been sent !</h3>
+            <p>
+              We will try to answer them best in the shortest possible time
+              deadlines. See you soon at Mr. Coffee
+            </p>
+          </div>
+        </div>
+        <h4 class="close_icon" id="close_icon">CLOSE</h4>
+      </div>
+    </div>
+
+    <!-- ################################################################ -->
+    <!-- #######################   End Module  ########################## -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
+
+    <main id="main">
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   Start Nav   ########################### -->
+      <!-- ################################################################ -->
+      <nav>
+        <div class="navBar_container container">
+          <div id="nav_humburger_icon" class="nav_humburger_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul id="navbar">
+            <li class="navBar_list logo">
+              <a class="navBar_item navBar_item_logo" href="index.html"
+                ><img
+                  class="navBar_logo_img"
+                  src="./Assets/full_logo_white.png"
+                  alt="logo"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li class="navBar_list">
+              <a class="navBar_item active" href="index.html ">HOME</a>
+            </li>
+            <li class="navBar_list">
+              <a class="navBar_item" href="about.html">About</a>
+            </li>
+            <li class="navBar_list">
+              <a class="navBar_item" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   End Nav   ############################# -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   Start Header  ######################### -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <header>
+        <div class="header_logo_wrapper">
+          <img
+            src="./Assets/logo_mrcoffee.png"
+            alt="mrcoffee logo"
+            loading="lazy"
+          />
+        </div>
+      </header>
+      <section class="contact container">
+        <h2>Tell us everything!</h2>
+
+        <div class="contact_form">
+          <form action="mrcoffe@mc.com" method="post" id="form">
+            <label for="name">NAME: <span>*</span></label>
+            <input type="text" name="name" id="name" required />
+            <label for="surname">SURNAME: <span>*</span></label>
+            <input type="text" name="surname" id="surname" required />
+            <label for="phone">PHONE: <span>*</span></label>
+            <input type="text" name="phone" id="phone" required />
+            <label for="email">Email: <span>*</span></label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">MESSAGE: <span>*</span></label>
+            <textarea name="message" id="message" required></textarea>
+            <input type="submit" value="SUBMIT" />
+          </form>
+        </div>
+        <h1>We are waiting for you !</h1>
+        <div class="address_container">
+          <h2>Mr.Coffee</h2>
+          <address>
+            15 place Jules Guesde75006 <br />
+            Paris
+            <br />
+            <a href="tel:+33946257845">Tel: +33 946 2578 45</a>
+            <br />
+            Mail:
+            <a href="mailto:contact@mr-coffee.com">contact@mr-coffee.com</a
+            ><br />
+          </address>
+        </div>
+
+        <div class="map_container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.124524376201!2d2.318581415902419!3d48.836763410182876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20France!5e0!3m2!1sen!2sau!4v1587541980780!5m2!1sen!2sau"
+            id="google_map"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+      <!-- ######################   End Header   ########################## -->
+      <!-- ################################################################ -->
+      <!-- ################################################################ -->
+    </main>
+
+    <!-- ################################################################ -->
+    <!-- ##################   Start footer ##################### -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
+    <footer>
+      <div class="footer_logo_container">
+        <a class="footer_logo scrollTo" href="#main"></a>
+      </div>
+      <h4>Follow us on social media!</h4>
+      <div class="footer_social_icons">
+        <a class="footer_icon_facebook" href="//www.facebook.com/"></a>
+        <a class="footer_icon_twitter" href="//www.linkedin.com/"></a>
+        <a class="footer_icon_linkedin" href="//twitter.com/"></a>
+      </div>
+    </footer>
+    <!-- ################################################################ -->
+    <!-- #######################   End footer  ########################## -->
+    <!-- ################################################################ -->
+    <!-- ################################################################ -->
+
+    <script src="./js/js.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
