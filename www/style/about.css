@@ -28,7 +28,7 @@
   .about_container {
     grid-template-columns: 1fr;
 
-    /* padding-bottom: 400px; */
+    padding-bottom: 400px;
   }
 }
 
