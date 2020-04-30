@@ -99,14 +99,14 @@ body {
 
 /* Works on Chrome/Edge/Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 *::-webkit-scrollbar-track {
   background: var(--dark);
 }
 *::-webkit-scrollbar-thumb {
   background-color: var(--blue);
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 /*
